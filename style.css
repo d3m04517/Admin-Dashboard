@@ -28,7 +28,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     height: 100vh;
 }
 
@@ -94,7 +94,7 @@ body {
 
 .header {
     grid-column: 2 / 5;
-    box-shadow: 5px 5px gray;
+    box-shadow: 1px 1px #e6effa;
     display: grid;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -196,49 +196,84 @@ gap: 5%;
     box-shadow: 5px 5px gray;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    padding: 5%;
+    padding: 5% 2% 5% 5%;
+    background-color: #eff6ff;
+    z-index: -1;
+    gap: 5%;
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4%;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     padding: 5%;
+    box-shadow: 2px 1px 2px 1px lightgray;
+    border-left-color: var(--theme-color);
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-radius: 5px;
+    background-color: white;
+    font-family: var(--theme-font);
 }
 
 .card-desc {
     flex-grow: 1;
 }
 
+.card-desc p {
+    font-size: 14px;
+}
+
 .main-right {
     display: grid;
+    gap: 5%;
 }
 
 .announcements {
-    display: grid;
-    gap: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 10%;
-    background-color: blue;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .announcement-card:nth-child(-n+2) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.announcement-card p {
+    font-size: var(--small-text);
+    color: gray;
 }
 
 .trending {
     display: grid;
     align-items: center;
-}
+    box-shadow: 1px 1px 1px 1px lightgray;
+    background-color: white;
+    border-radius: 5px;}
 .user-icon {
     text-align: center;
 }
 .user {
-    padding: 5%;
+    padding: 3%;
     display: grid;
-    gap: 10%;
+    gap: 5%;
     grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--theme-font);
 }
+
+.user-description {
+    font-size: var(--small-text);
+}
+
